@@ -11,6 +11,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: "First step"
-      run: echo "123"
+      run: |
+        echo "123"
     - name: "Second step"
         echo "The Second step"
