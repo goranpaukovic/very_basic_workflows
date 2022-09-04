@@ -1,0 +1,17 @@
+name: Second workflow
+
+# Trigger this workflow
+on:
+  workflow_call: {} # Call the workflow from another one
+
+jobs:
+  main-job-in-second-wf:
+    name: "Main job in second workflow"
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: "First step"
+      run:
+        ls -altr
+    - name: "Second step"
+        echo "The Second step"

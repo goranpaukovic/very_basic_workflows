@@ -19,3 +19,8 @@ jobs:
     - name: "Step No.1"
       run: |
         echo "Hello World ${{ env.Var1 }}"
+
+  call-another-workflow:
+    name: "Call another workflow"
+    needs: hello-world
+    uses: ./.github/workflows/second_workflow.yaml
