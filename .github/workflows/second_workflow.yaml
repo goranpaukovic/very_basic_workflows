@@ -13,5 +13,3 @@ jobs:
     - name: "First step"
       run: |
         echo "123"
-    - name: "Second step"
-        echo "The Second step"
