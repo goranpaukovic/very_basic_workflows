@@ -1,0 +1,21 @@
+name: Main workflow
+
+# When to trigger this workflow
+on:
+  push:
+  pull_request:
+    branches: [ master, feature ]
+
+jobs:
+  hello-world:
+    name: "Hello World"
+    # Runner node
+    runs-on: ubuntu-latest
+    env:
+      Var1: " from workflow"
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: "Step No.1"
+      run: |
+        echo "Hello World ${{ env.Var1 }}"
